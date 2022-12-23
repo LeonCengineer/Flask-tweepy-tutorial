@@ -7,13 +7,15 @@ app = Flask(__name__)
 def index():
 	
 	
-	auth = tweepy.OAuthHandler('7UzudjdAzuBxfRBDI8yo0KhXh', 'gXcSE0AYYDSZDOUaAtEgUDYJ9QCV1ifXgLLEM6EOUDjbZrmXQA')
-	auth.set_access_token('2638191615-S6kii5fXiPPdSqJrasLYxrEVnJZRfhMaEj307y0', 'U3VrNfUoNkscC8DkYJhRpYVdt9WcYYzUCOBgd9sFIFy3B')
+	auth = tweepy.OAuth1UserHandler(
+	   consumer_key, consumer_secret, access_token, access_token_secret
+	)
+
 	api = tweepy.API(auth)
-	
-	search = request.args.get('q')
-	
-	public_tweets = api.user_timeline(search)
+
+	public_tweets = api.home_timeline()
+	for tweet in public_tweets:
+	    print(tweet.text)
 
 	return render_template('home.html', tweets=public_tweets)
 
