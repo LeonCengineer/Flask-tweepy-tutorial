@@ -6,8 +6,8 @@ app = Flask(__name__)
 @app.route('/')
 def index():
 	
-	auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-	auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+	auth = tweepy.OAuthHandler(/etc/secrets/<CONSUMER_KEY>, /etc/secrets/<CONSUMER_SECRET>)
+	auth.set_access_token(/etc/secrets/<ACCESS_TOKEN>, /etc/secrets/<ACCESS_TOKEN_SECRET>)
 	api = tweepy.API(auth, wait_on_rate_limit=True)
 
 	public_tweets = api.home_timeline()
