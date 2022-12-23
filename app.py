@@ -8,7 +8,7 @@ def index():
 	
 	
 	auth = tweepy.OAuth1UserHandler(
-	   '7UzudjdAzuBxfRBDI8yo0KhXh', 'gXcSE0AYYDSZDOUaAtEgUDYJ9QCV1ifXgLLEM6EOUDjbZrmXQA', '2638191615-S6kii5fXiPPdSqJrasLYxrEVnJZRfhMaEj307y0', 'U3VrNfUoNkscC8DkYJhRpYVdt9WcYYzUCOBgd9sFIFy3B)
+	   '7UzudjdAzuBxfRBDI8yo0KhXh', 'gXcSE0AYYDSZDOUaAtEgUDYJ9QCV1ifXgLLEM6EOUDjbZrmXQA', '2638191615-S6kii5fXiPPdSqJrasLYxrEVnJZRfhMaEj307y0', 'U3VrNfUoNkscC8DkYJhRpYVdt9WcYYzUCOBgd9sFIFy3B')
 	)
 
 	api = tweepy.API(auth)
